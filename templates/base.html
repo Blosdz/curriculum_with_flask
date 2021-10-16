@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.9">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    {% block head %}{% endblock %}
+</head>
+
+<body background='../static/imgs/123344.jpg' id="body_background">
+        <header>
+            <h1 > <a href="{{url_for('index')}}">Curriculum</a></h1>
+        </header>
+        <div class="sidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <i class='bx bxs-log-in-circle'></i>
+                    <div class="logo_name">Contenido</div>
+                    <button class="btn btn-lg btn-primary btn-bloc" href="{{url_for(login.html)}}">LOGIN</button>
+                    
+                    <button class="btn btn-lg btn-primary btn-bloc" href="{{url_for(signup.html)}}">SIGNUP</button>
+                </div>
+                <i class='bx bxs-grid' id='btn' ></i>
+            </div>
+           <ul class="nav_list">
+               <li>
+                   <a href="{{url_for('about_me')}}" class="aref" >
+                        <i class='bx bxs-face' ></i>
+                        <span class="links_name">Acerca de mí</span>
+                   </a>
+               </li>
+               <li>
+                   <a href="{{url_for('skills')}}" class="aref"  >
+                       <i class='bx bxs-book-content' ></i>
+                       <span class="links_name">Mis habilidades</span>
+                   </a>
+                </li> 
+                <li>
+                   <a href="{{url_for('works')}}" class="aref" >
+                        <i class='bx bx-server'></i>
+                        <span class="links_name">Trabajos previos</span>
+                   </a>
+               </li>           
+               <li>
+                   <a href="https://github.com/Blosdz" class="aref" >
+                        <i class='bx bxs-user-voice' ></i>
+                       <span class="links_name">Contacto </span>
+                   </a>
+               </li>
+               <div class="site">
+                <a href="https://www.instagram.com/juhann_69/" class="sites">
+                    <i class='bx bxl-instagram' ></i> 
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100023000087664" class="sites">
+                    <i class='bx bxl-facebook-circle'></i> 
+                </a> 
+                <a href="https://twitter.com/blosdz"  class="sites"> 
+                    <i class='bx bxl-twitter' ></i> </i>
+                </a>
+               </div>
+           </ul>
+        </div>
+        
+        <div class="home_content">
+            {% block content %}{% endblock %}    
+        </div>
+</body>
+
+
+
+</html>
+<script src="static/java/curriculum.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
